@@ -1,0 +1,106 @@
+.home-page-main-box {
+    border: solid 0px black;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.left-side-bar {
+    border: solid 1px rgb(193, 193, 193);
+    border-radius: 4px;
+    width: 20%;
+    min-width: 250px;
+    max-width: 400px;
+    padding: 10px;
+    margin-right: 15px;
+    min-height: 700px;
+}
+
+.right-side-box {
+    border: solid 1px rgb(193, 193, 193);
+    border-radius: 4px;
+    width: 80%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.header-main-box {
+    margin-bottom: 30px;
+    background-color: #1C2541;
+    padding: 10px 0px 10px 19px;
+    color: #65cce4;
+    font-size: larger;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    font-weight: bold;
+    font-family: Helvetica;
+    font-size: 25px;
+    text-shadow: 3px 2px #65cde463;
+}
+
+.footer-main-box {
+    border-top: solid 1px #c7ccd2;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    color: #c7ccd2;
+}
+
+.display-documents-box-1 {
+    border-radius: 4px;
+    margin-top: 20px;
+    flex-direction: row;
+    display: flex;
+    width: 100%;
+}
+
+table,
+th,
+td {
+    border-bottom: 1px solid rgb(228, 228, 228);
+}
+
+td {
+    padding: 8px 5px 8px 5px;
+}
+
+th {
+    padding: 5px;
+    position: sticky;
+    top: 0;
+    background-color: rgb(225, 225, 225);
+    text-align: left;
+    border-bottom: #b2b2b2 solid 1px;
+}
+
+tr:hover {
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
+
+.display-documents-left-box {
+    overflow-y: scroll;
+    min-width: 300px;
+    max-width: 1500px;
+    width: 100%;
+    margin-right: 10px;
+    height: 550px;
+}
+
+.display-documents-drop-collection-box {
+    overflow-y: scroll;
+    min-width: 300px;
+    max-width: 1500px;
+    width: 100%;
+    margin-right: 10px;
+    height: 350px;
+}
