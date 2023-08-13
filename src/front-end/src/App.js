@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Home from "./components/Home";
 import Header from "./components/Header";
@@ -18,7 +19,7 @@ function getWindowSize() {
 }
 
 
-export default function App() {
+function RealApp() {
   const [windowSize, setWindowSize] = useState(getWindowSize());
 
   useEffect(() => {
@@ -41,4 +42,10 @@ export default function App() {
   );
 }
 
-
+export default function App() {
+  return (
+    <BrowserRouter basename="/db">
+      <RealApp />
+    </BrowserRouter>
+  )
+}
