@@ -4,7 +4,7 @@ class BackEndConnectionImpl {
     async connect_mongo_db(host_name, port_name, callback) {
         let query = { 'host_name': host_name, 'port_name': port_name };
 
-        return axios.post('/mongodb/connect', query, {})
+        return axios.post('/db/mongodb/connect', query, {})
             .then(function (response) {
                 if (callback) {
                     callback(response.data);
@@ -21,7 +21,7 @@ class BackEndConnectionImpl {
     }
 
     async get_collections_mongo_db(query, callback) {
-        return axios.post('/mongodb/collections', query, {})
+        return axios.post('/db/mongodb/collections', query, {})
             .then(function (response) {
                 if (callback) {
                     callback(response.data);
@@ -35,7 +35,7 @@ class BackEndConnectionImpl {
     }
 
     async get_documents_mongo_db(query, callback) {
-        return axios.post('/mongodb/documents', query, {})
+        return axios.post('/db/mongodb/documents', query, {})
             .then(function (response) {
                 if (callback) {
                     callback(response.data);
@@ -49,7 +49,7 @@ class BackEndConnectionImpl {
     }
 
     async insert_documents_mongo_db(query, callback) {
-        return axios.post('/mongodb/insert_documents', query, {})
+        return axios.post('/db/mongodb/insert_documents', query, {})
             .then(function (response) {
                 if (callback) {
                     callback(response.data);
@@ -63,7 +63,7 @@ class BackEndConnectionImpl {
     }
 
     async delete_document_mongo_db(query, callback) {
-        return axios.post('/mongodb/delete_document', query, {})
+        return axios.post('/db/mongodb/delete_document', query, {})
             .then(function (response) {
                 if (callback) {
                     callback(response.data);
@@ -77,7 +77,7 @@ class BackEndConnectionImpl {
     }
 
     async drop_collection_mongo_db(query, callback) {
-        return axios.post('/mongodb/drop_collection', query, {})
+        return axios.post('/db/mongodb/drop_collection', query, {})
             .then(function (response) {
                 if (callback) {
                     callback(response.data);
@@ -94,7 +94,7 @@ class BackEndConnectionImpl {
     }
 
     async update_document_mongo_db(query, callback) {
-        return axios.post('/mongodb/update_document', query, {})
+        return axios.post('/db/mongodb/update_document', query, {})
             .then(function (response) {
                 if (callback) {
                     callback(response.data);
@@ -108,7 +108,7 @@ class BackEndConnectionImpl {
     }
 
     async get_databases_mongo_db(query, callback) {
-        return axios.post('/mongodb/databases', query, {})
+        return axios.post('/db/mongodb/databases', query, {})
             .then(function (response) {
                 if (callback) {
                     callback(response.data);
