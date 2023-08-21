@@ -1,12 +1,9 @@
 
 import React, { useState, useEffect } from "react";
-import { BrowserRouter } from "react-router-dom";
 
 import Home from "./components/Home";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-
-import axios from 'axios';
 
 
 const FOOTER_OFFSET = 185;
@@ -23,7 +20,7 @@ function getWindowSize() {
 }
 
 
-function RealApp() {
+export default function App() {
   const [windowSize, setWindowSize] = useState(getWindowSize());
 
   useEffect(() => {
@@ -44,17 +41,4 @@ function RealApp() {
     </>
 
   );
-}
-
-export default function App() {
-
-  axios.get('/db/mongodb/test').then(resp => {
-    console.log(resp.data);
-});
-
-  return (
-    // <BrowserRouter basename="/db">
-      <RealApp />
-    // </BrowserRouter>
-  )
 }
