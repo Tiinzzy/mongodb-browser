@@ -123,8 +123,8 @@ class BackEndConnectionImpl {
             })
     }
 
-    async get_databases_mongo_db(callback) {
-        return axios.get(context + '/db/mongodb/test', {}, {})
+    async test_mongo_db(query, callback) {
+        return axios.get(context + '/db/mongodb/test', query, {})
             .then(function (response) {
                 if (callback) {
                     callback(response.data);

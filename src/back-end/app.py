@@ -3,6 +3,7 @@ import json
 import os
 import app_mongodb
 
+
 print('Static home address for flask server :', os.getenv('STATIC_HOME'))
 
 app = Flask(
