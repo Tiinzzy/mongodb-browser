@@ -1,11 +1,14 @@
-if [ -d $1 ] 
-then
-    export STATIC_HOME=$1
-    node server.js
-    cd ..
-    cd backend-server
+echo 'running server.py'
+export STATIC_HOME=/home/tina/Downloads/install1/dist
+python3 server.py ponyo &
 
-    python3 server.py
-else
-    echo "Sorry, not a directory"
-fi
+echo 'running server.js'
+export STATIC_HOME=/home/tina/Downloads/install1/dist
+node ../server.js ponyo &
+
+
+echo 'SERVERS ARE READY, WAITING 5 SECONDS TO OPEN THE BROWSER'
+
+sleep 5
+
+sensible-browser http://localhost:3000
